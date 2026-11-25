@@ -1,0 +1,304 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+  --lumora-ivory: #F7F5F0;
+  --lumora-cream: #EEEAE2;
+  --lumora-charcoal: #191918;
+  --lumora-gold: #C6AA83;
+  --lumora-beige: #D8C7AD;
+  --lumora-muted: #77736D;
+}
+
+@layer base {
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--lumora-ivory);
+    color: var(--lumora-charcoal);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, .font-editorial {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  ::selection {
+    background: var(--lumora-beige);
+    color: var(--lumora-charcoal);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--lumora-gold);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .studio-eyebrow {
+    color: #81745F;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.19em;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+
+  .studio-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(3.35rem, 7.3vw, 7rem);
+    font-weight: 500;
+    letter-spacing: -0.045em;
+    line-height: 0.92;
+    text-wrap: balance;
+  }
+
+  .studio-section-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2.6rem, 5vw, 4.5rem);
+    font-weight: 500;
+    letter-spacing: -0.035em;
+    line-height: 0.98;
+    text-wrap: balance;
+  }
+
+  .studio-copy {
+    color: var(--lumora-muted);
+    font-size: 0.96rem;
+    line-height: 1.8;
+    text-wrap: pretty;
+  }
+
+  .studio-button-primary,
+  .studio-button-secondary {
+    align-items: center;
+    display: inline-flex;
+    gap: 0.65rem;
+    justify-content: center;
+    min-height: 3.15rem;
+    padding: 0.75rem 1.35rem;
+    transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms ease;
+  }
+
+  .studio-button-primary {
+    background: var(--lumora-charcoal);
+    color: white;
+  }
+
+  .studio-button-primary:hover {
+    background: #373632;
+    transform: translateY(-1px);
+  }
+
+  .studio-button-secondary {
+    border: 1px solid #D7D1C6;
+    color: var(--lumora-charcoal);
+  }
+
+  .studio-button-secondary:hover {
+    background: var(--lumora-cream);
+    border-color: #C8B99F;
+  }
+
+  .studio-input {
+    background: #FCFBF8;
+    border: 1px solid #DED9D0;
+    border-radius: 0.65rem;
+    color: var(--lumora-charcoal);
+    min-height: 3.1rem;
+    padding: 0.8rem 0.9rem;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+    width: 100%;
+  }
+
+  .studio-input:focus {
+    border-color: var(--lumora-gold);
+    box-shadow: 0 0 0 3px rgb(198 170 131 / 18%);
+    outline: none;
+  }
+
+  .public-form-page label {
+    color: #5F5B54;
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    margin-bottom: 0.45rem;
+  }
+
+  .public-form-page input,
+  .public-form-page select,
+  .public-form-page textarea {
+    background: #FCFBF8;
+    border: 1px solid #DED9D0;
+    border-radius: 0.55rem;
+    color: var(--lumora-charcoal);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    padding: 0.8rem 0.9rem;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+    width: 100%;
+  }
+
+  .public-form-page input,
+  .public-form-page select {
+    min-height: 3.1rem;
+  }
+
+  .public-form-page textarea {
+    min-height: 8rem;
+    resize: vertical;
+  }
+
+  .public-form-page input:focus,
+  .public-form-page select:focus,
+  .public-form-page textarea:focus {
+    border-color: var(--lumora-gold);
+    box-shadow: 0 0 0 3px rgb(198 170 131 / 18%);
+    outline: none;
+  }
+
+  .public-form-page .studio-public-form button[type='submit'] {
+    background: var(--lumora-charcoal);
+    border: 1px solid var(--lumora-charcoal);
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.15rem;
+    padding: 0.75rem 1.35rem;
+    transition: background-color 180ms ease, transform 180ms ease;
+  }
+
+  .public-form-page .studio-public-form button[type='submit']:hover {
+    background: #373632;
+    transform: translateY(-1px);
+  }
+}
+
+.heading-1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+.heading-2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+.heading-3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+.heading-4 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+.heading-5 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+.title-2 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+
+.title-3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+.title-4 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+
+.body-3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-wrap: pretty;
+}
+
+.body-5 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+
+.body-6 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  text-wrap: pretty;
+}
+
+.button-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  padding: 8px 16px;
+}
+
+.button-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  padding: 8px 12px;
+}
+
+.caption-2 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+
+.caption-4 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+}
+
+.hero-gradient-text {
+  color: var(--lumora-charcoal);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
